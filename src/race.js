@@ -1,5 +1,5 @@
 import { initOptions } from "./initOptions";
-import { pickone } from "./pick";
+import { pickone } from "./pickone";
 const race = settings => {
   const options = initOptions(
     {
