@@ -1,0 +1,29 @@
+{
+  "name": "automatic-bassoon",
+  "version": "0.0.1",
+  "description": "RPG Character Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgildone/automatic-bassoon.git"
+  },
+  "author": "Matteo Gildone <matteo.gildone@gmail.com> (http://domsmasher.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgildone/automatic-bassoon/issues"
+  },
+  "homepage": "https://github.com/mgildone/automatic-bassoon#readme",
+  "dependencies": {
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}
