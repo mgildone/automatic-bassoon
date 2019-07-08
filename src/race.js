@@ -1,22 +1,32 @@
-import { initOptions } from "./initOptions";
 import { pickone } from "./pickone";
-const race = settings => {
-  const options = initOptions(
-    {
-      races: ["Dwarf", "Elf", "Gnome", "Goblin", "Halfling", "Human"],
-      ratio: []
-    },
-    settings
-  );
+import { chances } from "./chances";
+import { pipe } from "ramda";
 
-  if (
-    options.ratio.length > 0 &&
-    options.ratio.length !== options.races.length
-  ) {
-    throw new Error("'ratio' has to have the ~same length as 'races'");
+const createChancesArray = ({ races, ratios }) => {
+  if (ratios.length > 0) {
+    const arr = ratios.map((ratio, index) => ({
+      name: races[index],
+      pct: ratio
+    }));
+    return chances(arr);
   }
-
-  return pickone(options.races);
+  return races;
 };
 
-export { race };
+const setRace = ({
+  races = ["Dwarf", "Elf", "Gnome", "Goblin", "Halfling", "Human"],
+  ratios = []
+} = {}) => {
+  if (ratios.length > 0 && ratios.length !== races.length) {
+    throw new Error("'ratio' has to have the same length as 'races'");
+  }
+  return { races, ratios };
+};
+
+const pickRace = pipe(
+  setRace,
+  createChancesArray,
+  pickone
+);
+
+export { createChancesArray, pickRace };

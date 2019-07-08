@@ -1,18 +1,28 @@
-import { gender } from "./gender";
-import { race } from "./race";
+import { pickGender } from "./gender";
+import { pickRace } from "./race";
 
-console.log(gender());
-console.log(race());
+console.log("defaults", pickGender());
 console.log(
-  race({
-    races: [
-      "Dragonborn",
-      "Dwarf",
-      "Elf",
-      "Gnome",
-      "Goblin",
-      "Halfling",
-      "Human"
-    ]
+  "genders default, extraGenders custom",
+  pickGender({
+    extraGenders: ["a", "b", "c", "D", "w"]
+  })
+);
+console.log(
+  "genders custom, extraGenders custom",
+  pickGender({
+    genders: ["Banana", "Mango"],
+    extraGenders: ["a", "b", "c", "D", "w"]
+  })
+);
+console.log(pickRace());
+console.log(
+  pickRace({
+    races: ["a", "v", "s", "q", "g", "m", "n"]
+  })
+);
+console.log(
+  pickRace({
+    ratios: [10, 20, 20, 20, 20, 10]
   })
 );
