@@ -1,5 +1,6 @@
 import { pickone } from "./pickone";
 import { pipe } from "ramda";
+import { toObj } from "./toObj";
 
 const setGenders = ({ genders = ["Male", "Female"], extraGenders = [] } = {}) =>
   genders.concat(extraGenders);
@@ -9,4 +10,6 @@ const pickGender = pipe(
   pickone
 );
 
-export { pickGender };
+const pickGenderToObj = toObj(pickGender)("gender");
+
+export { pickGender, pickGenderToObj };

@@ -1,5 +1,6 @@
 import { pickone } from "./pickone";
 import { chances } from "./chances";
+import { toObj } from "./toObj";
 import { pipe } from "ramda";
 
 const createChancesArray = ({ races, ratios }) => {
@@ -28,5 +29,6 @@ const pickRace = pipe(
   createChancesArray,
   pickone
 );
+const pickRaceToObj = toObj(pickRace)("race");
 
-export { createChancesArray, pickRace };
+export { createChancesArray, pickRace, pickRaceToObj };
