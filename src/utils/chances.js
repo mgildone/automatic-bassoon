@@ -20,4 +20,4 @@ const createChancesArray = ({ list, ratios }) => {
   return list;
 };
 
-export { createChancesArray };
+export { chances, createChancesArray };

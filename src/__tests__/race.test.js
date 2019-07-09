@@ -2,7 +2,7 @@ import { pickRace, createChancesArray } from "../race";
 const races = ["Dwarf", "Elf", "Gnome", "Goblin", "Halfling", "Human"];
 const ratios = [5, 5, 5, 10, 15, 60];
 const racesList = createChancesArray({
-  races,
+  list: races,
   ratios
 });
 
@@ -29,7 +29,7 @@ describe("Race", () => {
   it("Should be 100 elements in the list", () => {
     const expected = 100;
     const actual = createChancesArray({
-      races,
+      list: races,
       ratios
     }).length;
     expect(actual).toEqual(expected);
