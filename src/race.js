@@ -1,24 +1,28 @@
 import { pickone } from "./utils/pickone";
+import { pipe, ifElse, has, assoc, identity, prop } from "ramda";
 import { createChancesArray } from "./utils/chances";
-import { toObj, toMergedObj } from "./utils/toObj";
-import { pipe } from "ramda";
+import { defaults } from "./defaults";
 
-const setRace = ({
-  races = ["Dwarf", "Elf", "Gnome", "Goblin", "Halfling", "Human"],
-  ratios = []
-} = {}) => {
-  if (ratios.length > 0 && ratios.length !== races.length) {
-    throw new Error("'ratio' has to have the same length as 'races'");
-  }
-  return { list: races, ratios };
-};
+const checkIfRace = ifElse(
+  has("races"),
+  identity,
+  assoc("races", defaults.races)
+);
+
+const checkIfRatios = ifElse(has("ratios"), identity, assoc("ratios", []));
+const checkIfObj = ifElse(has("name"), prop("name"), identity);
+const validate = pipe(
+  checkIfRatios,
+  checkIfRace
+);
+const createRacesChancesArray = ({ races, ratios }) =>
+  createChancesArray({ list: races, ratios });
 
 const pickRace = pipe(
-  setRace,
-  createChancesArray,
-  pickone
+  validate,
+  createRacesChancesArray,
+  pickone,
+  checkIfObj
 );
-const pickRaceToObj = toObj(pickRace)("race");
-const pickRaceToMergeObj = toMergedObj(pickRaceToObj);
 
-export { createChancesArray, pickRace, pickRaceToObj, pickRaceToMergeObj };
+export { pickRace };

@@ -1,28 +1,30 @@
-import { mergeAll, pipe } from "ramda";
+import { pickGender } from "./gender";
+import { pickRace } from "./race";
+import { pickClass } from "./class";
+import { pickGeneralTraits } from "./generalTraits";
+import { pickAlignment } from "./alignments";
+import { pickAge } from "./age";
+import { pickBond } from "./bond";
+import { pickPersonalityTraits } from "./personalityTraits";
+import { pipe, tap } from "ramda";
+import { toObj, toMergedObj } from "./utils/toObj";
+import { template } from "./utils/template";
 
-import { pickGenderToObj, pickGenderToMergeObj } from "./gender";
-import { pickRaceToObj, pickRaceToMergeObj } from "./race";
-import { pickGeneralTraitsToObj } from "./general-traits";
-import { pickClassToObj, pickClassToMergeObj } from "./class";
+const trace = label => {
+  return tap(x => console.log(`${label}:  ${JSON.stringify(x)}`));
+};
 
-const template = ({ gender, race, generalTraits, klass } = {}) =>
-  `Greetings [name],\nYou are a ${gender.toLowerCase()} ${race} ${klass} described as ${generalTraits}.`;
-
-console.log(
-  template(
-    mergeAll([
-      pickGenderToObj(),
-      pickRaceToObj(),
-      pickGeneralTraitsToObj(),
-      pickClassToObj()
-    ])
-  )
+const generateCharacter = pipe(
+  toMergedObj(toObj(pickGender)("genders")),
+  toMergedObj(toObj(pickRace)("races")),
+  toMergedObj(toObj(pickClass)("klasses")),
+  toMergedObj(toObj(pickGeneralTraits)("generalTraits")),
+  toMergedObj(toObj(pickAlignment)("alignments")),
+  toMergedObj(toObj(pickAge)("age")),
+  toMergedObj(toObj(pickBond)("bonds")),
+  toMergedObj(toObj(pickPersonalityTraits)("personalityTraits")),
+  trace("after pickGeneralTraits")
 );
 
-console.log(
-  pipe(
-    pickGenderToMergeObj,
-    pickRaceToMergeObj,
-    pickClassToMergeObj
-  )({})
-);
+const character = generateCharacter({});
+console.log(template(character));

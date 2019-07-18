@@ -3,26 +3,26 @@ import { pipe, ifElse, has, assoc, identity, prop } from "ramda";
 import { createChancesArray } from "./utils/chances";
 import { defaults } from "./defaults";
 
-const checkIfGender = ifElse(
-  has("genders"),
+const checkIfPersonalityTraits = ifElse(
+  has("personalityTraits"),
   identity,
-  assoc("genders", defaults.genders)
+  assoc("personalityTraits", defaults.personalityTraits)
 );
 
 const checkIfRatios = ifElse(has("ratios"), identity, assoc("ratios", []));
 const checkIfObj = ifElse(has("name"), prop("name"), identity);
 const validate = pipe(
   checkIfRatios,
-  checkIfGender
+  checkIfPersonalityTraits
 );
-const createGendersChancesArray = ({ genders, ratios }) =>
-  createChancesArray({ list: genders, ratios });
+const createPersonalityTraitsChancesArray = ({ personalityTraits, ratios }) =>
+  createChancesArray({ list: personalityTraits, ratios });
 
-const pickGender = pipe(
+const pickPersonalityTraits = pipe(
   validate,
-  createGendersChancesArray,
+  createPersonalityTraitsChancesArray,
   pickone,
   checkIfObj
 );
 
-export { pickGender };
+export { pickPersonalityTraits };

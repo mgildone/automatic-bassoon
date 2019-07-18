@@ -10,7 +10,7 @@ const toObj = fn => {
 
 const toMergedObj = fn => {
   return obj => {
-    return mergeAll([obj, fn()]);
+    return mergeAll([obj, fn(obj)]);
   };
 };
 
