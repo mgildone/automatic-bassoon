@@ -1,50 +1,8 @@
 {
-  "name": "automatic-bassoon",
-  "version": "0.0.1",
-  "description": "RPG Character Generator",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon --exec babel-node ./src/index.js",
-    "lint": "eslint .",
-    "test": "jest --colors --verbose --coverage",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mgildone/automatic-bassoon.git"
-  },
-  "author": "Matteo Gildone <matteo.gildone@gmail.com> (http://domsmasher.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mgildone/automatic-bassoon/issues"
-  },
-  "homepage": "https://github.com/mgildone/automatic-bassoon#readme",
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "ramda": "^0.26.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.4",
-    "@babel/node": "^7.5.0",
-    "@babel/preset-env": "^7.5.4",
-    "babel-jest": "^24.8.0",
-    "babel-loader": "^8.0.6",
-    "eslint": "^6.0.1",
-    "jest": "^24.8.0",
-    "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"devDependencies": {
+		"lerna": "^2.5.1"
+	},
+	"dependencies": {
+		"ramda": "^0.26.1"
+	}
 }
