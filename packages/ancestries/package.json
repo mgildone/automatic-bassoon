@@ -1,5 +1,5 @@
 {
-  "name": "@automatic-bassoon/core",
+  "name": "@automatic-bassoon/ancestries",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -7,10 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Matteo Gildone <matteo.gildone@gmail.com> (http://domsmasher.com/)",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "ramda": "^0.26.1",
-    "roll": "^1.2.0"
+    "@automatic-bassoon/core": "^0.0.1"
   }
 }

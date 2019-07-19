@@ -1,0 +1,17 @@
+{
+  "name": "Human",
+  "description": "Humans are incredibly diverse in terms of everything from their body size to their perspectives and personalities.",
+  "abilityBoosts": ["Free", "Free"],
+  "abilityFlaws": [],
+  "hitPoints": 8,
+  "size": "Medium",
+  "speed": 25,
+  "traits": ["Human", "Humanoid"],
+  "feats": {
+    "level1": [],
+    "level5": [],
+    "level9": [],
+    "level13": [],
+    "level17": []
+  }
+}

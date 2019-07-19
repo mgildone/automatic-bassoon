@@ -1,0 +1,17 @@
+{
+  "name": "Halfling",
+  "description": "Halfling are a short, adaptable people who exhibit remarkable curiosity and humor.",
+  "abilityBoosts": ["Dexterity", "Wisdom", "Free"],
+  "abilityFlaws": ["Strength"],
+  "hitPoints": 6,
+  "size": "Small",
+  "speed": 25,
+  "traits": ["Halfling", "Humanoid"],
+  "feats": {
+    "level1": [],
+    "level5": [],
+    "level9": [],
+    "level13": [],
+    "level17": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Name of the ancestry",
+  "description": "Description of the ancestry",
+  "abilityBoosts": [],
+  "abilityFlaws": [],
+  "hitPoints": 0,
+  "size": "",
+  "speed": 0,
+  "traits": [],
+  "feats": {
+    "level1": [],
+    "level5": [],
+    "level9": [],
+    "level13": [],
+    "level17": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Dwarf",
+  "description": "Dwarves are a short, stocky people who are often stubborn,  fierce, and devoted.",
+  "abilityBoosts": ["Constitution", "Wisdom", "Free"],
+  "abilityFlaws": ["Charisma"],
+  "hitPoints": 10,
+  "size": "Medium",
+  "speed": 20,
+  "traits": ["Dwarf", "Humanoid"],
+  "feats": {
+    "level1": [],
+    "level5": [],
+    "level9": [],
+    "level13": [],
+    "level17": []
+  }
+}

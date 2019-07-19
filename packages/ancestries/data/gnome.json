@@ -1,0 +1,17 @@
+{
+  "name": "Gnome",
+  "description": "Gnomes are a short, slight, mercurial people who crave change and excitement.",
+  "abilityBoosts": ["Constitution", "Charisma", "Free"],
+  "abilityFlaws": ["Strength"],
+  "hitPoints": 8,
+  "size": "Small",
+  "speed": 20,
+  "traits": ["Gnome", "Humanoid"],
+  "feats": {
+    "level1": [],
+    "level5": [],
+    "level9": [],
+    "level13": [],
+    "level17": []
+  }
+}

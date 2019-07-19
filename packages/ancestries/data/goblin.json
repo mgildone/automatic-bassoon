@@ -1,0 +1,17 @@
+{
+  "name": "Goblin",
+  "description": "Goblins are a short, scrappy, energetic people who have spent millennia maligned and feared.",
+  "abilityBoosts": ["Dexterity", "Charisma", "Free"],
+  "abilityFlaws": ["Wisdom"],
+  "hitPoints": 6,
+  "size": "Small",
+  "speed": 25,
+  "traits": ["Goblin", "Humanoid"],
+  "feats": {
+    "level1": [],
+    "level5": [],
+    "level9": [],
+    "level13": [],
+    "level17": []
+  }
+}
