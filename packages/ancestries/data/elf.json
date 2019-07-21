@@ -1,0 +1,17 @@
+{
+  "name": "Elf",
+  "description": "Elves are a tall, slender, long-lived people whose culture peaked long ago.",
+  "abilityBoosts": ["Dexterity", "Intelligence", "Free"],
+  "abilityFlaws": ["Constitution"],
+  "hitPoints": 6,
+  "size": "Medium",
+  "speed": 30,
+  "traits": ["Elf", "Humanoid"],
+  "feats": {
+    "level1": [],
+    "level5": [],
+    "level9": [],
+    "level13": [],
+    "level17": []
+  }
+}
