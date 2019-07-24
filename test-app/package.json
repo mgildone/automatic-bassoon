@@ -1,7 +1,7 @@
 {
   "name": "automatic-bassoon",
   "scripts": {
-    "start": "nodemon --exec babel-node ./test-app/index.js",
+    "start": "nodemon --exec babel-node ./src/index.js",
     "lint": "eslint .",
     "test": "jest --colors --verbose --coverage",
     "build": "webpack"

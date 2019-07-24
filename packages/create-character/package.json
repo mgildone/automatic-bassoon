@@ -1,17 +1,15 @@
 {
-  "name": "@automatic-bassoon/core",
+  "name": "@automatic-bassoon/create-character",
   "version": "0.0.1",
   "description": "",
-  "main": "./index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Matteo Gildone <matteo.gildone@gmail.com> (http://domsmasher.com/)",
   "license": "MIT",
   "dependencies": {
-    "ramda": "^0.26.1",
-    "roll": "^1.2.0"
+    "@automatic-bassoon/ancestries": "^0.0.1"
   }
 }

@@ -1,4 +1,4 @@
-import { MIN_INT, MAX_INT } from "./constant";
+import { MIN_INT, MAX_INT } from "./constants";
 
 const random = ({ min = MIN_INT, max = MAX_INT } = {}) => {
   if (min > max) {

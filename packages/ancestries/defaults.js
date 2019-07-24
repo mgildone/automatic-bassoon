@@ -5,12 +5,7 @@ const goblin = require("./data/goblin.json");
 const halfling = require("./data/halfling.json");
 const human = require("./data/human.json");
 const defaults = {
-  dwarf,
-  elf,
-  gnome,
-  goblin,
-  halfling,
-  human
+  ancestries: [dwarf, elf, gnome, goblin, halfling, human]
 };
 
 export { defaults };

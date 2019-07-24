@@ -1,0 +1,7 @@
+{
+  "watch": ["./src/**/*.js"],
+  "ignore": ["__test__/*", "docs/*", "dist/*"],
+  "events": {
+    "restart": "npm run build"
+  }
+}

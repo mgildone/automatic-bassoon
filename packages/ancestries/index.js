@@ -1,27 +1,30 @@
 import { pickone, createChancesArray } from "@automatic-bassoon/core";
-import { pipe, ifElse, has, assoc, identity, prop } from "ramda";
+import { pipe, ifElse, has, assoc, identity, prop, isNil } from "ramda";
 import { defaults } from "./defaults";
 
-const checkIfRace = ifElse(
-  has("races"),
+const checkIfAncestry = ifElse(
+  has("ancestries"),
   identity,
-  assoc("races", defaults.races)
+  assoc("ancestries", defaults.ancestries)
 );
 
+const checkIfObject = ifElse(isNil, () => ({}), identity);
 const checkIfRatios = ifElse(has("ratios"), identity, assoc("ratios", []));
 const checkIfObj = ifElse(has("name"), prop("name"), identity);
 const validate = pipe(
+  checkIfObject,
   checkIfRatios,
-  checkIfRace
+  checkIfAncestry
 );
-const createRacesChancesArray = ({ races, ratios }) =>
-  createChancesArray({ list: races, ratios });
+const createAncestrysChancesArray = ({ ancestries, ratios }) => {
+  return createChancesArray({ list: ancestries, ratios });
+};
 
-const pickRace = pipe(
+const pickAncestry = pipe(
   validate,
-  createRacesChancesArray,
+  createAncestrysChancesArray,
   pickone,
   checkIfObj
 );
 
-export { pickRace };
+export { pickAncestry };
