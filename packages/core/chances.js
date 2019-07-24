@@ -4,7 +4,7 @@ const chances = arr => {
   }
   return [].concat(
     ...arr.map(val => {
-      return Array(val.pct).fill(val);
+      return Array(val.pct).fill(val.name);
     })
   );
 };

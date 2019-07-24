@@ -3,7 +3,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node ./test-app/index.js",
     "lint": "eslint .",
-    "test": "jest --colors --verbose --coverage",
+    "test": "jest",
     "build": "webpack"
   },
   "repository": {
@@ -21,28 +21,37 @@
     "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "lerna": "^3.16.0",
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.4",
-    "@babel/node": "^7.5.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.4",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "eslint": "^6.0.1",
     "jest": "^24.8.0",
+    "lerna": "^3.16.0",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
+    },
+    "modulePaths": [
+      "<rootDir>/"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "verbose": true,
+    "testRegex": "__tests__/.*\\.js$",
+    "collectCoverageFrom": [
+      "packages/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   }
 }

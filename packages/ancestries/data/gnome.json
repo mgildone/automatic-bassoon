@@ -1,4 +1,5 @@
 {
+  "id": "gnome",
   "name": "Gnome",
   "description": "Gnomes are a short, slight, mercurial people who crave change and excitement.",
   "abilityBoosts": ["Constitution", "Charisma", "Free"],

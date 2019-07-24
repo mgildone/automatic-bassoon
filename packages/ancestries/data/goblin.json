@@ -1,4 +1,5 @@
 {
+  "id": "goblin",
   "name": "Goblin",
   "description": "Goblins are a short, scrappy, energetic people who have spent millennia maligned and feared.",
   "abilityBoosts": ["Dexterity", "Charisma", "Free"],
