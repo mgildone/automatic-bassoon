@@ -3,7 +3,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node ./test-app/index.js",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack"
   },
   "repository": {
@@ -44,6 +44,10 @@
     "testRegex": "__tests__/.*\\.js$",
     "collectCoverageFrom": [
       "packages/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "coverage"
     ],
     "coverageThreshold": {
       "global": {

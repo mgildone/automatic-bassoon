@@ -11,12 +11,11 @@ const racesList = createChancesArray({
 describe("Race", () => {
   it("Should return an element from the array", () => {
     const actual = pickAncestry();
-
-    expect(races.indexOf(actual) >= 0).toBeTruthy();
+    expect(races.indexOf(actual.name) >= 0).toBeTruthy();
   });
   it("Should return an element from the array", () => {
     const actual = pickAncestry({
-      races
+      ancestries: races
     });
 
     expect(races.indexOf(actual) >= 0).toBeTruthy();
@@ -39,7 +38,7 @@ describe("Race", () => {
   races.forEach((item, index) => {
     it(`${item} should appear ${ratios[index]} in the matrix`, () => {
       const expected = ratios[index];
-      const actual = racesList.filter(c => c.name === item).length;
+      const actual = racesList.filter(c => c === item).length;
       expect(actual).toEqual(expected);
     });
   });
