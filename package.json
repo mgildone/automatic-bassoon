@@ -3,7 +3,8 @@
   "scripts": {
     "start": "nodemon --exec babel-node ./test-app/index.js",
     "lint": "eslint .",
-    "test": "jest --coverage",
+    "test": "jest --colors --verbose --debug",
+    "test:coverage": "jest --colors --verbose --debug --coverage",
     "build": "webpack"
   },
   "repository": {
