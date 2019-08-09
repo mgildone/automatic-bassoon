@@ -1,6 +1,6 @@
 {
   "name": "@automatic-bassoon/ancestries",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "./index.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@automatic-bassoon/core": "^0.0.1"
+    "@automatic-bassoon/core": "^0.1.0"
   }
 }
