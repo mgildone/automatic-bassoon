@@ -1,8 +1,11 @@
-import { roll } from "roll";
+import Roll from "roll";
+
 const diceRoll = dice => {
-  if (typeof dice === "string") {
-    return roll(dice).result;
+  const roll = new Roll();
+  if (typeof dice !== "string") {
+    throw new Error("Dice must be a string");
   }
+  return roll.roll(dice).result;
 };
 
 export { diceRoll };

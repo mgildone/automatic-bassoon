@@ -1,6 +1,6 @@
 {
   "name": "@automatic-bassoon/create-character",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,9 @@
   "author": "Matteo Gildone <matteo.gildone@gmail.com> (http://domsmasher.com/)",
   "license": "MIT",
   "dependencies": {
-    "@automatic-bassoon/ancestries": "^0.0.1"
+    "@automatic-bassoon/ancestries": "^0.1.0",
+    "@automatic-bassoon/bonds": "^0.1.0",
+    "@automatic-bassoon/professions": "^0.1.0",
+    "@automatic-bassoon/traits": "^0.0.1"
   }
 }

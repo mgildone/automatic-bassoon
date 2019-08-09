@@ -1,16 +1,16 @@
 {
-  "name": "@automatic-bassoon/ancestries",
+  "name": "@automatic-bassoon/professions",
   "version": "0.1.0",
   "description": "",
-  "main": "./index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@automatic-bassoon/ancestries": "^0.1.0",
     "@automatic-bassoon/core": "^0.1.0"
   }
 }

@@ -1,4 +1,5 @@
 {
+  "id": "halfling",
   "name": "Halfling",
   "description": "Halfling are a short, adaptable people who exhibit remarkable curiosity and humor.",
   "abilityBoosts": ["Dexterity", "Wisdom", "Free"],

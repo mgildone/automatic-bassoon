@@ -11,7 +11,9 @@ const list = [
     id: "B"
   }
 ];
+
 const chancesList = chances(list);
+
 describe("Chances", () => {
   it("Should throw an error if an empty array is passed", () => {
     expect(() => {
@@ -27,7 +29,7 @@ describe("Chances", () => {
   list.forEach(item => {
     it(`${item.name} should appear ${item.pct} in the matrix`, () => {
       const expected = item.pct;
-      const actual = chancesList.filter(c => c.name === item.name).length;
+      const actual = chancesList.filter(c => c === item.name).length;
       expect(actual).toEqual(expected);
     });
   });

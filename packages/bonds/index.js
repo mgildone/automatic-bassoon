@@ -1,23 +1,19 @@
 import { pickone } from "@automatic-bassoon/core";
 import { pipe, ifElse, has, identity, isNil } from "ramda";
-import { defaults } from "./defaults";
+const defaults = require("./data/defaults.json");
 
-const checkIfAncestry = ifElse(
-  has("ancestries"),
-  ({ ancestries }) => ancestries,
-  () => defaults.ancestries
-);
+const checkIfBonds = ifElse(has("bonds"), ({ bonds }) => bonds, () => defaults);
 
 const checkIfObject = ifElse(isNil, () => ({}), identity);
 
 const validate = pipe(
   checkIfObject,
-  checkIfAncestry
+  checkIfBonds
 );
 
-const pickAncestry = pipe(
+const pickBond = pipe(
   validate,
   pickone
 );
 
-export { pickAncestry };
+export { pickBond };

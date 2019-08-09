@@ -1,4 +1,5 @@
 {
+  "id": "human",
   "name": "Human",
   "description": "Humans are incredibly diverse in terms of everything from their body size to their perspectives and personalities.",
   "abilityBoosts": ["Free", "Free"],

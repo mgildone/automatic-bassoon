@@ -1,4 +1,5 @@
 {
+  "id": "elf",
   "name": "Elf",
   "description": "Elves are a tall, slender, long-lived people whose culture peaked long ago.",
   "abilityBoosts": ["Dexterity", "Intelligence", "Free"],
