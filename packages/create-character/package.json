@@ -12,6 +12,7 @@
   "dependencies": {
     "@automatic-bassoon/ancestries": "^0.1.0",
     "@automatic-bassoon/bonds": "^0.1.0",
-    "@automatic-bassoon/professions": "^0.1.0"
+    "@automatic-bassoon/professions": "^0.1.0",
+    "@automatic-bassoon/traits": "^0.0.1"
   }
 }
